@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 
 <head>
   <meta charset="UTF-8">
@@ -8,40 +9,43 @@
   <title>Question</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-<header>
-    <div id="HASH" class="blue-msg">
-        <div id="left">
-          <span id="count" >0</span>
-        </div>
-        <div id="right">
-          <span class=""id="timer">0</span>
-        </div>
-      </div>
-
-    <!-- <h4>counter <span id="counter">0</span></h4> -->
-    <!-- <h4>timer <span id="timer">0</span></h4> -->
-</header>
 
 <body>
-  <div>
-    <h4>Question : <span id="questionTB">0</span></h4>
+  <header>
+    <div id="HASH" class="blue-msg">
+      <div id="left">
+        <span id="count">0</span>
+      </div>
+      <div id="right">
+        <span class="" id="timer">0</span>
+      </div>
+    </div>
+    ​
+  </header>
+  ​
+  <main class = "mainDiv">
+    <h4 id ="h4Top">Question : <span id="questionTB">0</span></h4>
     <div class="container">
       <button id="button1"></button>
       <button id="button2"></button>
       <button id="button3"></button>
       <button id="button4"></button>
     </div>
+    ​ <div style="text-align: center; ">
+      <button id="button5"></button>
+    </div>
+    <!-- <button id="button6" href="step2.html" visibility='hidden'></button> -->
+    <input id = "initInput" type="text" style.display = "none">
+    <button id="button6"  ></button>
+    <button id="button7"  style.display = "none"></button>
 
-  </div>
-  <div style="text-align: center; ">
-    <!-- border: 1px solid" -->
-    <button id= "button5"></button>
-  </div>
-  <div style="text-align: center; ">
-    <button id= "button6" href = "step2.html"></button>
-    <!-- <input type="button" value="Start the Game?" id= "button5"> -->
+  </main>
+
+  <div  id = "topScore" style="text-align: center; ">
+
   </div>
   <script src="./script.js"></script>
 </body>
+​
 
 </html>
