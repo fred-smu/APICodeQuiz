@@ -191,23 +191,20 @@ buttonClick4.addEventListener("click", function () {
 buttonClick5.addEventListener("click", function () {
     console.log("in5");
     indexQ = 0;
+    secondsLeft = 100;
      nextQ();
      setTime();
 });
 
 buttonClick6.addEventListener("click", function () {
-    
-    h4Top.textContent = "Enter Your Initals";
     h4Top.textContent = "Enter Your Initals";
     
     initInput.style.display = "block"; 
     button7RB.style.display = "block"; 
     button7RB.textContent = " Return To Game";   
     if (buttonClick6.textContent === " Save Your Score") {
-        // console.log(initInput.textContent);
         var gameInit = initInput.value;
         var liCreate = document.createElement("li");
-        // console.log("called");
         topScore.style.display = "block";
         var topDisply = document.getElementById("topScore");
         topDisply.appendChild(liCreate).textContent= gameInit + "  " + count ;
