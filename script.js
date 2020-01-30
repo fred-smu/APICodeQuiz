@@ -12,8 +12,7 @@ var indexQ = 0;
 var beakLoop = questions.length;
 var numOfQ = questions.length;
 
-var h4Head = document.getElementById("h4Top");
-// var h4Top = document.querySelector("#questionTB");
+var h4Head = document.getElementById("h4Top"); 
 var button1RB = document.querySelector("#button1");
 var button2RB = document.querySelector("#button2");
 var button3RB = document.querySelector("#button3");
@@ -123,8 +122,18 @@ function nextQ() {
 
 /*************************************************************
  * Buttons click events
+ * button discription 
+ * button1 > answer A
+ * button2 > answer B
+ * button3 > answer C
+ * button4 > answer D
+ * button5 > Starts Game
+ * button6 > is uses 2 times 
+ *              1) askes "do you want to save your score"
+ *              2) saves your INITALS
+ * button7 > return to game. resets vars
  * 
- * 
+ * NOTE if ansers dont match questions[indexQ].e  15 sec is taken away from the clock
  */
 
 buttonClick1.addEventListener("click", function () {
@@ -133,13 +142,10 @@ buttonClick1.addEventListener("click", function () {
         setCounterText();
         indexQ++;
         nextQ();
-        //console.log(indexQ + "answqer is =" + answer);
     }else{
         indexQ++;
         nextQ();
         timeLeft.textContent = (secondsLeft=  secondsLeft - 15) + " seconds left.";
-
-        //console.log(indexQ + "answqer is was not " + answer );
     };
 });
 
@@ -149,13 +155,11 @@ buttonClick2.addEventListener("click", function () {
         setCounterText();
         indexQ++;
         nextQ();
-        //console.log(indexQ + "answqer is =" + answer);
     }else{
         indexQ++;
         nextQ();
         timeLeft.textContent = (secondsLeft=  secondsLeft - 15) + " seconds left.";
-        //console.log(indexQ + "answqer is was not " + answer );
-    };
+     };
 });
 
 buttonClick3.addEventListener("click", function () {
@@ -164,11 +168,9 @@ buttonClick3.addEventListener("click", function () {
         setCounterText();
         indexQ++;
         nextQ();
-        //console.log(indexQ + "answqer is =" + answer);
     }else{indexQ++;
         nextQ();
         timeLeft.textContent = (secondsLeft=  secondsLeft - 15) + " seconds left.";
-        //console.log(indexQ + "answqer is was not " + answer );
     };
 });
 
@@ -178,18 +180,14 @@ buttonClick4.addEventListener("click", function () {
         setCounterText();
         indexQ++;
         nextQ();
-        //console.log(indexQ + "answqer is =" + answer);
     }else{
         indexQ++;
         nextQ();
         timeLeft.textContent = (secondsLeft=  secondsLeft - 15) + " seconds left.";
-
-               //console.log(indexQ + "answqer is was not " + answer );
     };
 });
 
 buttonClick5.addEventListener("click", function () {
-    console.log("in5");
     indexQ = 0;
     secondsLeft = 100;
      nextQ();
